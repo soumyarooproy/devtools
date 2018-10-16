@@ -1,0 +1,10 @@
+[user]
+	name = Soumyaroop Roy
+	email = soroy@tesla.com
+[alias]
+    s = status
+    f = fetch --all --prune
+    p = pull
+    b = branch -vv
+    d = diff
+    l = log --graph --decorate --oneline

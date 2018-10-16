@@ -1,0 +1,34 @@
+
+"""Vundle Config Begin"""
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" Let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Plug-ins begin
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+"Plugin 'lyuts/vim-rtags'
+" Plug-ins end
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+"""Vundle Config End"""
+
+" Nerdtree Settings Begin
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+map <C-n> :NERDTreeToggle<CR>
+" Nerdtree Settings End
+
+" Tagbar Settings Begin
+nmap <F8> :TagbarToggle<CR>
+" Tagbar Settings End
