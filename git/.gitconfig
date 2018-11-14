@@ -5,6 +5,8 @@
     s = status
     f = fetch --all --prune
     p = pull
+    co = checkout
     b = branch -vv
     d = diff
     l = log --graph --decorate --oneline
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
